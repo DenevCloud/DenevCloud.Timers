@@ -7,7 +7,7 @@ namespace DenevCloud
     public class Timer : IDisposable
     {
         public event EventHandler<TimerEventArgs> TriggerEvent;
-        public event EventHandler<TimerEventArgs> HanldingEvent;
+        public event EventHandler<TimerEventArgs> HandlingEvent;
 
         public readonly int Delay;
         public readonly TimeSpan TimeSpanTrigger;
@@ -71,7 +71,7 @@ namespace DenevCloud
 
         protected virtual void OnRunning(TimerEventArgs e)
         {
-            HanldingEvent?.Invoke(this, e);
+            HandlingEvent?.Invoke(this, e);
         }
 
         protected virtual void OnTrigger(TimerEventArgs e)

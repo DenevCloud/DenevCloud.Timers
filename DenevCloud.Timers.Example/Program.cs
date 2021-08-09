@@ -13,7 +13,7 @@ namespace DenevCloud.Timers.Example
             Timer timer = new Timer(TimeToPass, 1000, DateTime.Now);
 
             timer.TriggerEvent += Timer_TriggerEvent;
-            timer.HanldingEvent += Timer_HanldingEvent;
+            timer.HandlingEvent += Timer_HandlingEvent;
 
             timer.StartAsync().GetAwaiter();
 
@@ -24,7 +24,7 @@ namespace DenevCloud.Timers.Example
             Console.ReadKey();
         }
 
-        private static void Timer_HanldingEvent(object sender, TimerEventArgs e)
+        private static void Timer_HandlingEvent(object sender, TimerEventArgs e)
         {
             Console.WriteLine($"Update: {e.TimeRemaining}");
         }
