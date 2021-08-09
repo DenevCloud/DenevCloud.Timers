@@ -18,8 +18,9 @@ namespace DenevCloud.Timers.Example
             timer.StartAsync().GetAwaiter();
 
             await Task.Delay(7000);
-
-            timer.Trigger();
+            
+            //Trigger event will occur on the 5th, 7th and 10th second.
+            timer.Trigger(); 
 
             Console.ReadKey();
         }
