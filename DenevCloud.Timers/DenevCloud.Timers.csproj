@@ -1,7 +1,27 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFrameworks>net5.0;netstandard2.0;netstandard2.1;</TargetFrameworks>
+    <version>0.1.1</version>
+    <AssemblyVersion>0.1.2.7891</AssemblyVersion>
+    <FileVersion>0.1.2.7891</FileVersion>
+    <Authors>Milen Denev</Authors>
+    <Company>Denev Cloud</Company>
+    <Description>
+      Simple timer with a trigger event and a handling event
+      Example - https://github.com/DenevCloud/DenevCloud.Timers/tree/master/DenevCloud.Timers.Example
+    </Description>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/DenevCloud/DenevCloud.Timers</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/DenevCloud/DenevCloud.Timers</PackageProjectUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
