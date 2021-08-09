@@ -1,0 +1,38 @@
+# DenevCloud.Timers
+
+Simple timer with a trigger event and a handling event
+
+## Usage
+
+```cs
+static async Task Main(string[] args)
+{
+    TimeSpan TimeToPass = TimeSpan.FromSeconds(5);
+    //Trigger event will occur every 5 seconds and an update/handle event will occur every 1000ms (1 second)
+    Timer timer = new Timer(TimeToPass, 1000, DateTime.Now);
+
+    timer.TriggerEvent += Timer_TriggerEvent;
+    timer.HandlingEvent += Timer_HandlingEvent;
+
+    timer.StartAsync().GetAwaiter();
+
+    await Task.Delay(7000);
+    
+    //Trigger event will occur on the 5th, 7th and 10th second.
+    timer.Trigger(); 
+
+    Console.ReadKey();
+}
+
+private static void Timer_HandlingEvent(object sender, TimerEventArgs e)
+{
+    Console.WriteLine($"Update: {e.TimeRemaining}");
+}
+
+private static void Timer_TriggerEvent(object sender, TimerEventArgs e)
+{
+    Console.WriteLine($"Triggered");
+}
+```
+
+![Screenshot](https://cdn.denevcloud.com/denevcloud/denevcloud.timers.screenshot.jpg)
