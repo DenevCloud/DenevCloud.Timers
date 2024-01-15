@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netstandard2.0;netstandard2.1;</TargetFrameworks>
-    <version>0.1.1</version>
-    <AssemblyVersion>0.1.2.7891</AssemblyVersion>
-    <FileVersion>0.1.2.7891</FileVersion>
+    <TargetFrameworks>netstandard2.1;net8.0;</TargetFrameworks>
+    <version>0.1.2</version>
+    <AssemblyVersion>0.1.3.8780</AssemblyVersion>
+    <FileVersion>0.1.3.8780</FileVersion>
     <Authors>Milen Denev</Authors>
     <Company>Denev Cloud</Company>
     <Description>
